@@ -6,7 +6,7 @@ function popupDisplay(display)
     return popup.style.display = display;
 }
 
-iconShare.addEventListener("mouseover", () => {
+iconShare.addEventListener("click", () => {
     popup.style.position = 'absolute';
     popupDisplay('flex');
 });
