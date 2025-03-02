@@ -11,6 +11,15 @@ iconShare.addEventListener("click", () => {
     popupDisplay('flex');
 });
 
-iconShare.addEventListener("mouseout", () => {
+iconShare.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        if (!popup.matches(":hover"))
+        {
+            popupDisplay('none');
+        }
+    }, 200);
+});
+
+popup.addEventListener("mouseleave", () => {
     popupDisplay('none');
-})
+});
